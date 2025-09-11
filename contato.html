@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+    <link rel="stylesheet" href="CSS/contato.css">
+</head>
+<body>
+    <main>
+        <!-- A div form-container foi mantida para a borda e centralização -->
+        <div class="form-container">
+            <h1>Formulário de Contato Geral</h1>
+            <p>Preencha os campos abaixo para entrar em contato conosco</p>
+    
+            <form method="post" action="#">
+                <!-- Cada campo agora está em uma div para garantir que fiquem em linhas separadas -->
+                <div class="form-group">
+                    <label for="nomeCompleto">Nome Completo:</label>
+                    <input type="text" id="nomeCompleto" placeholder="Digite seu nome completo" required/>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required/>
+                </div>
+        
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" 
+                    placeholder="Digite seu telefone celular no formato (xx) xxxxx-xxxx" 
+                    id="telefone" 
+                    name="telefone" 
+                    pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto">
+                        <option value=""> Selecione: </option>
+                        <option value="informacoes">Informações gerais</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="pedido">Pedido especial</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required minlength="10" rows="5" cols="50" placeholder="Digite aqui sua mensagem"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+            <br/>
+            <a href="feedback.html">Deixe seu Feedback</a>
+        </div>
+    </main>
+</body>
+</html>

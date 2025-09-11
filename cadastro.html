@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro/Newsletter</title>
+</head>
+<body>
+    <main>
+        <h1>Formulário de Cadastro/Newsletter</h1>
+        <form>
+            <section>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nomeCompleto">Nome completo</label>
+                    <input 
+                        type="text" 
+                        id="nomeCompleto" 
+                        name="nomeCompleto" 
+                        placeholder="Digite seu nome completo..." 
+                        required
+                    />
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Digite seu e-mail..." 
+                        required
+                    />
+                    <br/>
+                    <br/>
+                    <label for="telfone">Telefone</label>
+                    <input 
+                        type="tel" 
+                        id="telefone" 
+                        name="telefone" 
+                        placeholder="Digite seu telefone/celular..." 
+                        pattern="^\(?\d{2}\)?[\s-]\d{4,5}-?\d{4}$"
+                        required
+                    />
+                    <label for="dataNascimento">Data de nascimento</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento"/>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" value="" required/>
+
+                    <label for="numero">Número</label>
+                    <input type="number" id="numero" name="numero" required/>
+<br/>
+<br/>
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" required/>
+
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" required/>
+
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]-{3}" required/>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                <legend>Preferências</legend>
+                <input type="checkbox" id="paesArtesanais"/>
+                <label for="paesArtesanais">Pães Artesanais</label>
+
+                <input type="checkbox" id="doces"/>
+                <label for="doces">Doces</label>
+
+                <input type="checkbox" id="salgados"/>
+                <label for="salgados">Salgados</label>
+
+                <input type="checkbox" id="produtosDiet"/>
+                <label for="produtosDiet">Produtos Diet</label>
+
+                <input type="checkbox" id="produtosIntegrais"/>
+                <label for="produtosIntegrais">Produtos Integrais</label>
+            </fieldset>
+            </section>
+            <br/>
+            <section>
+                <label for="promocoes">Aceitar receber promoções por e-mail</label>
+                <input type="checkbox" id="promocoes" name="promocoes"/>
+            </section>
+            <section>
+                <label for="termosdeUso">Aceitar os termos de uso </label>
+                <input type="checkbox" id="termosdeUso" name="termosdeUso"/>
+            </section>
+            <br/>
+            
+            <section>
+                <input type="submit" value="Enviar">
+            </section>
+        </form>
+    </main>
+</body>
+</html>

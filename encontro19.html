@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        picture{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>"
+</head>
+<body>
+    <div class="container">
+        <img src="/IMAGES/pães.avif">
+    </div>
+    <svg class="icone" viewbox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+    </svg>
+
+    <picture>
+        <source media="(min-width:880px)" srcset="/IMAGES/cafe.png">
+        <source media="(min-width:768px)" srcset="/IMAGES/croissant.webp">
+        <img src="IMAGES/croissant.webp" alt="Croissant" width="350">
+    </picture>
+</body>
+</html>

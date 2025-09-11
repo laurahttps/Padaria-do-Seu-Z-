@@ -1,14 +1,289 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Padaria do Seu Zé</title>
+    <!-- Importa a fonte 'Oswald' do Google Fonts para todo o site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link para o CSS de estilo -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" xintegrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+    <!--
+        Altera a classe "header" para o ID "cabecalho-principal" conforme solicitado pela professora.
+        Isso permite que o novo CSS possa estilizar o cabeçalho.
+    -->
+    <header id="cabecalho-principal">
+        <div class="header-content">
+            <!-- Código da Logo da Padaria do Seu Zé -->
+            <div class="logo-container">
+                <div class="logo-circle-pink">
+                    <div class="logo-circle-white">
+                        <!-- SVG de um chapéu de padeiro -->
+                        <svg class="bakery-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M542.4 205.8L512 256c-13.3 22.4-18.7 34.1-38.9 44.2-1.7 5.7-3.7 11.1-6.2 16.3c-1.3 2.8-2.6 5.6-4.1 8.3-28.5 49.3-59.5 73.1-99.2 87.6-4.9 1.8-10 3.3-15.3 4.5-47 10.7-100.2 15.3-160.8 15.3H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H352c88.4 0 160 71.6 160 160c0 14.6-2.5 29.1-7.4 43.1-7.8 22.2-25.5 41.5-40.6 61.1zM96 96v256H310.8c50.6 0 91.8-7.9 123.3-25.2 25.4-14 42.9-33.1 55.4-49.4 12.5-16.3 19-32.9 20.5-43.2 2-15-1.5-27-8-36.5-9.5-16.6-18.5-27.1-27.4-10.5-8.8-22.1-16.5-35.2-22.6-13.1-6-27.3-10-42.5-11.8-11.2-1.3-21.8-1.5-31.5-1.5H96z"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- SVG para o texto circundante -->
+                <svg class="text-ring-svg" viewBox="0 0 250 250">
+                    <!-- Caminho para o texto superior -->
+                    <path id="textPathTop" fill="none" d="M 25, 125 A 100, 100 0 0 1 225, 125"></path>
+                    <text>
+                        <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
+                            PADARIA DO SEU ZÉ
+                        </textPath>
+                    </text>
+                    <!-- Caminho para o texto inferior -->
+                    <path id="textPathBottom" fill="none" d="M 225, 125 A 100, 100 0 0 1 25, 125"></path>
+                    <text>
+                        <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">
+                            PERTO DE VOCÊ
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+            <h1>Padaria do Seu Zé</h1>
+        </div>
+        <button class="menu-hamburguer" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-buttons">
+            <a href="contato.html" target="_blank">Contato</a>
+            <a href="cadastro.html" target="_blank">Cadastro</a>
+            <a href="pedidos.html" target="_blank">Pedidos</a>
+            <a href="feedback.html" target="_blank">Feedback</a>
+            <!-- Botão de abrir modal corrigido para usar a classe correta e ser único -->
+            <a href="#" class="abrir-modal-btn">Abrir modal</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Início do Container Centralizado -->
+        <div class="container">
+            <!-- Seção de boas-vindas -->
+            <section>
+                <h2>Bem vindos(as) ao conteúdo principal da Padaria do Seu Zé!</h2>
+                <p>Aqui você encontrará os post mais recentes e informações importantes da nossa padaria;</p>
+            </section>
+
+            <!--Seção de produtos-->
+            <section id="produtos">
+                <h2>Nossos Produtos</h2>
+                <p>Conheça nossa seleção de pães artesanais, bolos, doces e salgados, feitos com os melhores ingredientes.</p>
+                
+                <!-- Contêiner principal para o slider -->
+                <div class="produtos-slider">
+                    <!-- Item de produto individual com botões de ação -->
+                    <div class="produto-item">
+                        <img src="https://th.bing.com/th/id/R.d1bb5bd203dad688610f080a69625eb2?rik=LxdGTLjBxVHFgQ&riu=http%3a%2f%2fstreetsmartbrazil.com%2fwp-content%2fuploads%2fdrupal-files%2fuserfiles%2fimage%2fpao+frances+3.JPG&ehk=J60ugidsDb8myDKtUfVHTJmQJP5m3o23V2EN6UVS1TY%3d&risl=&pid=ImgRaw&r=0" alt="Pão Francês">
+                        <h3>Pão Francês</h3>
+                        <p>Feito com fermentação natural, casca crocante e miolo macio.</p>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-comprar">Comprar</a>
+                            <!-- A classe foi alterada de "btn-saiba-mais" para "btn-info" -->
+                            <a href="#" class="btn btn-info">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <!-- Item de produto individual com botões de ação -->
+                    <div class="produto-item">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.bCOjUPbY72t_P-Qroz4rXgHaE8?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bolo de Chocolate">
+                        <h3>Bolo de Chocolate</h3>
+                        <p>Delicioso bolo de chocolate com recheio de brigadeiro cremoso.</p>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-comprar">Comprar</a>
+                            <!-- A classe foi alterada de "btn-saiba-mais" para "btn-info" -->
+                            <a href="#" class="btn btn-info">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <!-- Item de produto individual com botões de ação -->
+                    <div class="produto-item">
+                        <img src="https://th.bing.com/th/id/R.64e5613f6d2b1a595264ca85e1f3b991?rik=0WRBkExCBY%2bwJQ&pid=ImgRaw&r=0" alt="Croissant">
+                        <h3>Croissant</h3>
+                        <p>Clássico croissant francês, folhado e amanteigado.</p>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-comprar">Comprar</a>
+                            <!-- A classe foi alterada de "btn-saiba-mais" para "btn-info" -->
+                            <a href="#" class="btn btn-info">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <!-- Item de produto individual com botões de ação -->
+                    <div class="produto-item">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.wf1-RYjMlR32V59JweBXlwHaE8?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pão de Queijo">
+                        <h3>Pão de Queijo</h3>
+                        <p>Tradicional pão de queijo mineiro, crocante por fora e macio por dentro.</p>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-comprar">Comprar</a>
+                            <!-- A classe foi alterada de "btn-saiba-mais" para "btn-info" -->
+                            <a href="#" class="btn btn-info">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <!-- Item de produto individual com botões de ação -->
+                    <div class="produto-item">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.Hts-CzPWrbTPUqbKyKqoCgHaE7?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Muffin de Blueberry">
+                        <h3>Muffin de Blueberry</h3>
+                        <p>Fofinho e cheio de mirtilos frescos.</p>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-comprar">Comprar</a>
+                            <!-- A classe foi alterada de "btn-saiba-mais" para "btn-info" -->
+                            <a href="#" class="btn btn-info">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Seção de preços dos produtos-->
+            <section>
+                <h2>Preços dos produtos</h2>
+                <p>Venha conferir nossos produtos no precinho justo!</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Produtos</th>
+                            <th>Descrição</th>
+                            <th>Preços</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pães</td>
+                            <td>Pão Francês,<br> Croissant,<br> Pão de Queijo, <br>Pão Caseiro</td>
+                            <td>Quentinhos</td>
+                            <td>R$ 5,00/Kg</td>
+                        </tr>
+                        <tr>
+                            <td>Doces</td>
+                            <td>Bolo de chocolate, <br>Mousse de Maracujá, <br>Pudim</td>
+                            <td>Saborosos</td>
+                            <td>R$ 7,00/unidade</td>
+                        </tr>
+                        <tr>
+                            <td>Salgados</td>
+                            <td>Torta de Frango, <br>Coxinha de Frango, <br>Coxinha de Carne</td>
+                            <td>Cremosos</td>
+                            <td>R$ 10,00/unidade</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!--Seção de horários de funcionamento-->
+            <section id="horarios">
+                <h2>Horários de Funcionamento 🕕</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dias da Semana</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda a Sexta</td>
+                            <td>6h às 19h</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>6h às 18h</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>7h às 12h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section id="Diferenciais">
+                <h2>Diferenciais da Padaria do Seu Zé</h2>
+                <ul>
+                    <li>Ingredientes frescos diários</li>
+                    <li>Receitas tradicionais</li>
+                    <li> Atendimento personalizado</li>
+                </ul>
+            </section>
+            <!-- Seção 'Sobre nós' corrigida -->
+            <section id="Sobrenos">
+                <h2>Sobre nós</h2>
+                <p>A Padaria do Seu Zé é uma padaria de bairro criada pelo Zé e sua família para continuar com uma tradição familiar, que é: cozinhar! <br >Mas principalmente Pães. Então, venha participar dessa história longa e bem-sucedida.</p>
+                <!-- Contêiner de mídias para alinhar a imagem e o vídeo -->
+                <div class="media-container">
+                    <div class="media-item">
+                        <img src="https://img.freepik.com/fotos-premium/transportador-com-pao-fresco-na-fabrica-empresa-de-producao-de-pao-padaria-closeup-linha-industrial-para-assar-pao_331695-15472.jpg" alt="Assamento pães">
+                    </div>
+                    <div class="media-item">
+                        <iframe src="https://www.youtube.com/embed/BWIvoU_tesI?si=ANWmS8QAkwFGRqUK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p>Venha conhecer nossa padaria nesse tour!</p>
+                <h2>Cantinho da Padaria do Seu Zé</h2>
+                <p>Venha relaxar e tomar um bom café em uma cafeteria calma, bem organizada e refrescante.</p>
+                <div class="media-container">
+                    <div class="media-item">
+                        <iframe src="https://tecnicofat.github.io/files/videos/padaria.mp4" title="Tour pela padaria" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="media-item">
+                        <img src="https://tecnicofat.github.io/qualificasp/programacao-web/padaria_pessoas_medium/1x1/2.png" alt="Interior da padaria">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Fim do Container Centralizado -->
+    </main>
+
+    <a href="https://api.whatsapp.com/send/?phone=5511999999999" target="blank" class="whatsapp-button">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="#cabecalho-principal" class="voltar-para-topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Rodapé da página, agora com informações de contato -->
+    <footer>
+        <div class="footer-content">
+            <!-- Informações de Contato -->
+            <div class="footer-section contact-info">
+                <h3>Entre em Contato</h3>
+                <p>📞 (11) 98765-4321</p>
+                <p>📧 contato@padariadoze.com</p>
+                <p>📍 Rua das Flores, 441 - S\u00e3o Paulo, SP</p>
+            </div>
+            <!-- Redes Sociais -->
+            <div class="footer-section social-media">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                </div>
+            </div>
+            <!-- Direitos Autorais -->
+            <div class="footer-section copyright">
+                <p>&copy; 2025 por Seu Zé. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- O Modal em si -->
+    <div id="modal-exemplo" class="modal-overlay">
+        <!-- O conteúdo do modal -->
+        <div class="modal-content-container">
+            <!-- Botão para fechar o modal, a classe foi corrigida para corresponder ao JS -->
+            <span class="fechar-modal-btn">&times;</span>
+            <h3>Modal Exemplo</h3>
+            <p>Este é um modal de exemplo. Ele vai ficar sobre a página z-index e position.</p>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,598 @@
+/* ==========================================================================
+   1. RESET E ESTILOS GERAIS
+   ========================================================================== */
+
+/* Importa a fonte 'Oswald' do Google Fonts para todo o site */
+@import url('https://fonts.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Regras gerais para o corpo e fonte */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f8f8f8;
+}
+
+/* Define o modelo de caixa para todos os elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos para os títulos */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-size: 25px;
+    color: #a63b3b;
+    border-left: 6px solid #c94f4f;
+    padding-left: 18px;
+    margin-bottom: 35px;
+}
+
+h3 {
+    color: #524948;
+    font-size: 20px;
+    border-left: 6px solid #c94f4f;
+    padding-left: 18px;
+    margin-bottom: 15px;
+}
+
+p {
+    width: 80%;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Adicionando seletor descendente: estilo para parágrafos que estão dentro de qualquer seção */
+section p {
+    color: #524948;
+    font-size: 1.1em;
+}
+
+/* ==========================================================================
+   2. LAYOUT E ESTRUTURA
+   ========================================================================== */
+
+/* Estilos para o container principal que centraliza o conteúdo */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para as seções */
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para o cabeçalho, usando o ID único conforme a tarefa */
+#cabecalho-principal {
+    background: linear-gradient(to right, #ff8177 0%, #ff867a 8%, #ff8c7f 21%, #ff9185 52%, #cf556c 78%, #b12a5b 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Contêiner para a logo e o texto principal */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos para a logo */
+.logo-container {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.logo-circle-pink {
+    width: 100%;
+    height: 100%;
+    background-color: #e6b9c9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-circle-white {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bakery-icon {
+    width: 60%;
+    height: 60%;
+    fill: #b12a5b;
+}
+
+.text-ring-svg {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 110%;
+    height: 110%;
+    overflow: visible;
+}
+
+.text-ring-svg text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    fill: #b12a5b;
+}
+
+/* Estilos para os botões de navegação */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #c94f4f;
+    border: 2px solid #a63b3b;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nav-buttons a:hover {
+    background-color: #a63b3b;
+    transform: translateY(-2px);
+}
+
+/* Estilos para as seções de vídeo e imagem */
+#Sobrenos .media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para o contêiner de cada item de mídia */
+#Sobrenos .media-item {
+    flex: 1;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+/* Estilos para a imagem e o iframe */
+#Sobrenos img,
+#Sobrenos iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* --- NOVOS ESTILOS PARA O RODAPÉ --- */
+footer {
+    background: linear-gradient(to right, #ff8177 0%, #ff867a 8%, #ff8c7f 21%, #ff9185 52%, #cf556c 78%, #b12a5b 100%);
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: white;
+    border-left: none;
+    padding-left: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    color: #f8f8f8;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffc2d4;
+}
+
+.copyright {
+    flex-basis: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   3. COMPONENTES E MÓDULOS
+   ========================================================================== */
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    color: black;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    color: black;
+    font-weight: normal;
+}
+
+thead {
+    background-color: #c94f4f;
+    color: white;
+}
+
+/* Estilos para as linhas da tabela */
+tbody tr {
+    background-color: transparent;
+    color: black;
+}
+
+/* Estilos para linhas alternadas na tabela */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f8e1d4;
+    cursor: pointer;
+}
+
+/* Ajustes para a tabela de produtos */
+.produtos-table tr:first-child td {
+    background-color: #fce6f0;
+}
+
+.produtos-table tr:nth-child(2) td {
+    background-color: #fce6f0;
+}
+
+.produtos-table tr:last-child td {
+    background-color: #e6f7ec;
+}
+
+.produtos-table tr:first-child .category-cell {
+    background-color: #c94f4f;
+    color: white;
+}
+
+.produtos-table tr:nth-child(2) .category-cell {
+    background-color: #c94f4f;
+    color: white;
+}
+
+.produtos-table tr:last-child .category-cell {
+    background-color: #a63b3b;
+    color: white;
+}
+
+/* Estilos para os links na tabela de produtos */
+.produtos-table a {
+    color: #b12a5b;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.produtos-table a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para os textos de descrição e preços */
+.produtos-table .description-cell {
+    color: #b12a5b;
+    font-style: italic;
+}
+
+.produtos-table .price-cell {
+    color: black;
+    font-weight: normal;
+}
+
+/* --- ESTILOS PARA A GALERIA DE PRODUTOS --- */
+.produtos-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+/* Adicionando seletor de filho direto: estilo apenas para os itens que são filhos diretos de .produtos-slider */
+.produtos-slider > .produto-item {
+    flex: 0 0 auto;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #b12a5b;
+}
+
+/* Nova classe para produtos em destaque */
+.produto-destaque {
+    border: 2px solid #b12a5b;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.produto-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.produto-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Novos estilos para os botões de ação */
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-comprar {
+    background-color: #c94f4f;
+    border: 2px solid #c94f4f;
+}
+
+/* PSEUDO-CLASSE :hover */
+.btn-comprar:hover {
+    background-color: #a63b3b;
+    border-color: #a63b3b;
+    transform: translateY(-2px);
+}
+
+/* Classe renomeada para .btn-info */
+.btn-info {
+    background-color: transparent;
+    border: 2px solid #a63b3b;
+    color: #a63b3b;
+}
+
+/* PSEUDO-CLASSE :hover */
+.btn-info:hover {
+    background-color: #a63b3b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. CLASSES UTILITÁRIAS
+   ========================================================================== */
+
+/* Classes para espaçamento */
+.margin-top-10 { margin-top: 10px; }
+.margin-top-20 { margin-top: 20px; }
+.margin-bottom-15 { margin-bottom: 15px; }
+.padding-12 { padding: 12px; }
+
+/* Classes para cores */
+.color-primary { color: #b12a5b; }
+.color-secondary { color: #c94f4f; }
+.color-dark { color: #524948; }
+
+/* Classes para alinhamento de texto */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* ==========================================================================
+   5. MEDIA QUERIES E RESPONSIVIDADE
+   ========================================================================== */
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #cabecalho-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .nav-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+    p {
+        width: 100%;
+    }
+    #Sobrenos .media-container {
+        flex-direction: column;
+    }
+    #Sobrenos img,
+    #Sobrenos iframe {
+        height: auto;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .social-icons a {
+        margin: 0;
+    }
+}
+.whatsapp-button {
+    color: #25d366;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    text-decoration: none; /* Adicionado para remover sublinhado do link */
+    justify-content: center; /* Adicionado para centralizar o ícone */
+    cursor:pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-button:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+    opacity: 0.7; 
+}
+/* Fim-Whatsapp */
+
+.voltar-para-topo{
+    color: #c94f4f;
+    width: 50px;
+    height: 50px;
+    border: #c94f4f solid 1px;
+    border-radius: 50%;
+    display: flex;
+    left: 20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ;
+}
+
+.voltar-para-topo:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+    opacity: 0.7;
+}
+/* Fim-voltar */
+
+.modal-overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.fechar-modal-btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+.fechar-modal-btn:hover{
+    cursor: pointer;
+    color: red;
+}

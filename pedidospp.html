@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pedidos Especiais</title>
+</head>
+<body>
+    <main>
+        <h1>Formulário de Pedidos Especiais</h1>
+        <p>Preencha os campos abaixo para fazer seu pedido personalizado.</p>
+
+        <form action="#" method="post">
+
+            <section>
+                <fieldset>
+                    <legend>Dados do Cliente:</legend>
+                    <label for="nomeCompleto">Nome Completo: </label>
+                    <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Digite seu nome completo"/>
+                    <br/>
+                    <br/>
+                    <label for="telefone">Telefone: </label>
+                    <input 
+                        type="tel" placeholder="(xx) xxxxx-xxxx" id="telefone" name="telefone"
+                        pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"/>
+                    <label for="email">E-mail:</label>
+ <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required/>
+                </fieldset>
+            </section>
+
+            <section>
+                <h2>Detalhes do Pedido</h2>
+                <h3>Tipo de pedido</h3>
+                <input type="radio" id="bolo" name="tipoPedido" value="bolo"/>
+                <label for="bolo">Bolo</label>
+                <br/>
+                <br/>
+                <input type="radio" id="torta" name="tipoPedido" value="torta"/>
+                <label for="torta">Torta</label>
+                <br/>
+                <br/>
+                <input type="radio" id="salgados" name="tipoPedido" value="salgados"/>
+                <label for="salgados"> Salgados </label>
+                <br/>
+                <br/>
+                <label for="sabor">Sabor/Recheio</label>
+                <select id="sabor" name="sabor">
+                    <option value="">Selecione...</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="morango">Morango</option>
+                    <option value="baunilha">Baunilha</option>
+                </select>
+                <br/>
+                <br/>
+               
+                <h3>Tamanho:</h3>
+                <input type="radio" id="pequeno" name="tamanho" value="pequeno"/>
+                <label for="pequeno">Pequeno</label>
+                <br/>
+                <br/>
+                <input type="radio" id="medio" name="tamanho" value="medio"/>
+                <label for="medio">Médio</label>
+                <br/>
+                <br/>
+                <input type="radio" id="grande" name="tamanho" value="grande"/>
+                <label for="grande">Grande</label>
+                <br/>
+                <br/>
+                <label for="dataEntrega">Data de entrega: </label>
+                <input type="date" id="dataEntrega" name="dataEntrega" required/>
+            </section>
+            <!-- Observações especiais (textarea)
+
+                💵 Orçamento máximo (input number) -->
+
+            <section>
+                <h2>Informações Adicionais</h2>
+                
+                <label for="observacoes">Observações especiais: </label>
+                <textarea 
+                    id="observacoes" 
+                    name="observacoes" 
+                    minlength="10" 
+                    maxlength="50" 
+                    placeholder="Deixe aqui suas observações">
+                </textarea>
+                <br/>
+                <br/>
+                <label for="orcamento">Orçamento máximo:</label>
+                <input type="number" id="orcamento" name="orcamento" min="0" step="0.01" placeholder="0,00">
+            </section>
+
+            <br/>
+            <br/>
+            <input type="submit" value="Enviar">
+        </form>
+
+    </main>
+
+</body>
+</html>

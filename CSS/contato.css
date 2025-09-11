@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+*{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    color: white;
+    padding: 30px 0 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 120px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+span{
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+} 
+/*  Navegação */
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color: rgb(39, 37, 36);
+    border:1px solid rgb(39, 37, 36);
+    padding: 5px 10px;
+    width: 20px;
+    border-radius: 20px;
+}
+
+a:hover{
+    background-color: #ffe0b3;
+    border: none;
+    color: #b12a5b;
+} 
+/* Fim - navegação */
+
+/* Seções */
+section{
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+h2{
+    font-size: 25px;
+    color: #a63b3b;
+    border-left: 6px solid #c94f4f;
+    padding-left: 10px;
+    margin-bottom: 35px;
+}
+
+section p{
+    width: 80%;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h3{
+    color: #524948;
+    font-size: 20px;
+    margin-bottom: 15px;
+}  
+/* Fim - Seções */
+/* Tabelas */
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+th, td{
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+thead{
+    background-color: #c94f4f;
+    color: white;
+}
+
+tbody tr:hover{
+    background-color: #f8e1d4;
+    cursor: pointer;
+} 
+/* FIM - Tabelas */
+
+/*  Galeria */
+
+#galeria div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+} 
+figure{
+    max-width: 280px;
+    height: 260px;
+    text-align: center;
+    background-color: #ffe0b3;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+figure:hover{
+    transform: scale(1.05);
+}
+img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+figcaption{
+    padding: 15px 10px 0 10px;
+    font-size: 16px;
+}
+/* Fim - Galeria */
+/* Vídeos */
+#video-youtube{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe{
+    width: 1050px;
+    height: 280px;
+}
+#container-video{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+video{
+    width: 500px;
+    height: 315px;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+}
+/* Fim - Vídeos */
+/* Form */
+
+#container-form-index{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+input, textarea, button{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;    
+}
+/* input{
+    flex-grow: 1;
+} */
+.container-input{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 755px;
+    
+}
+
+.container-textarea{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 687px;
+}
+
+.label-textarea{
+    margin-top: 5px;
+}
+
+textarea{
+    resize:none;
+    height: 80px;
+    flex-grow: 1;
+}
+
+button{
+    background-color: #c94f4f;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #a63b3b;
+   /*  opacity: 0.8; */
+}
+
+footer{
+    background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer p span{
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* CONTATO */
+main{
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+main p{
+    width: 80%;
+    color: black;
+    margin-bottom: 10px;
+}
+#container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.container-input-contato{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    width: 755px;
+    
+}
+
+.container-textarea-contato{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 687px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+::placeholder{
+    color: #999;
+}
+
+input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor:pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    opacity: 0.5;
+}
+
+/* Adiciona uma borda s\u00F3lida de 2px na cor desejada ao redor do formul\u00E1rio */
+.form-container {
+    border: 2px solid #b12a5b;
+    padding: 20px; /* Adiciona espa\u00E7amento interno para n\u00E3o colar nos campos */
+    border-radius: 8px; /* Opcional: para deixar as bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: para dar um efeito de eleva\u00E7\u00E3o */
+}
+
+/* Exemplo de borda nos campos de input tamb\u00E9m, para harmonizar */
+input, textarea, select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding n\u00E3o aumente a largura */
+}
+
+/* Mudar a cor da borda ao focar no campo */
+input:focus, textarea:focus, select:focus {
+    border-color: #b12a5b; /* Borda fica da cor do formul\u00E1rio ao focar */
+    outline: none; /* Remove a borda azul padr\u00E3o do navegador */
+}
+
+/* PEDIDOS */
+/* .tamanho{
+    width: 50%;
+    height: 200px;
+   /*  border: 1px solid blue; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tamanho-opcoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+} */
