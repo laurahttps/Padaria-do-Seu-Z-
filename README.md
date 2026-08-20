@@ -38,3 +38,12 @@ Durante o desenvolvimento deste projeto, foram praticados:
 1. Clone este repositório:
    ```bash
    git clone [https://github.com/laurahttps/Padaria-do-Seu-Zé-.git](https://github.com/laurahttps/Padaria-do-Seu-Zé-.git)
+
+## 🚧 Status do Projeto & Próximos Passos
+
+O projeto encontra-se em fase de aprimoramento contínuo. 
+
+**Próximas melhorias planejadas:**
+- [ ] Implementação de responsividade avançada para dispositivos móveis (Mobile-first).
+- [ ] Validação de formulários via JavaScript no Front-end.
+- [ ] Integração com banco de dados ou API para persistência de pedidos.
