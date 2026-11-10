@@ -1,4 +1,4 @@
-# 🥖 Padaria do Seu Zé — Website Institucional & Sistema de Pedidos
+# 🥖 Padaria do Seu Zé — Website Institucional
 
 Um site institucional e responsivo desenvolvido para simular a presença online, catálogo de produtos e formulário de atendimento de uma padaria local.
 
@@ -33,11 +33,25 @@ Durante o desenvolvimento deste projeto, foram praticados:
 
 ---
 
+## 🌐 Veja online
+
+O site está publicado no GitHub Pages: **https://laurahttps.github.io/Padaria-do-Seu-Z-/**
+
+---
+
 ## 🛠️ Como Executar o Projeto
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/laurahttps/Padaria-do-Seu-Zé-.git](https://github.com/laurahttps/Padaria-do-Seu-Zé-.git)
+   git clone https://github.com/laurahttps/Padaria-do-Seu-Z-.git
+   ```
+2. Entre na pasta do projeto:
+   ```bash
+   cd Padaria-do-Seu-Z-
+   ```
+3. Abra o arquivo `index.html` no navegador (ou use a extensão Live Server do VS Code).
+
+---
 
 ## 🚧 Status do Projeto & Próximos Passos
 
@@ -47,3 +61,9 @@ O projeto encontra-se em fase de aprimoramento contínuo.
 - [ ] Implementação de responsividade avançada para dispositivos móveis (Mobile-first).
 - [ ] Validação de formulários via JavaScript no Front-end.
 - [ ] Integração com banco de dados ou API para persistência de pedidos.
+
+---
+
+## 👩‍💻 Autora
+
+**Laura Muniz de Castro** · [LinkedIn](https://www.linkedin.com/in/lauramunizdecastro) · [GitHub](https://github.com/laurahttps)
